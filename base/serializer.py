@@ -35,3 +35,9 @@ class PasswordResetSerializer(serializers.Serializer):
     current_password = serializers.CharField()
     password = serializers.CharField()
     cpassword = serializers.CharField()
+
+
+class UserDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "username", "email", "date_joined"]
